@@ -102,6 +102,3 @@ footer div {
     border-radius: 20px;
     box-sizing: border-box;
 }
-p :first-of-type::first-letter {
-    color: rgb(75, 195, 57);
-}
