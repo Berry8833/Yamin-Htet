@@ -2,99 +2,194 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
-a {
-    text-decoration: none;
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: black;
 }
-.Ant {
-    width: 100%;
-    height: 100vh;
-    background: url(/Yamin-Htet/Assets/images/Premium\ Photo\ _\ Illustration\ of\ speech\ bubble\ 3d\ render\ minimal\ concept.jpeg);
-    background-size: cover;
+img {
+    width: 120px;
 }
-nav {
+.container {
+    width: 80%;
+    margin: auto;
+}
+header {
+    background: pink;
+    color: maroon;
+    padding: 20px 0;
+    border-radius: 45px;
+}
+.header-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 100px;
 }
-.K {
-    max-height: 220px;
-    display: block;
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+nav {
+    display: flex;
+}
+nav ul {
+    list-style: none;
+    display: flex;
 }
 nav ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 10px 20px;
+    margin-right: 20px;
 }
 nav ul li a {
-    color: rgb(91, 78, 3);
-    position: relative;
-    padding: 5px 0;
+    color: blue;
+    text-decoration: none;
+    font-size: 20px;
 }
-nav ul li a:hover {
-    color: rgb(255, 47, 189);
+#about {
+    background-color: papayawhip;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    padding: 25px;
+    margin: 3%;
+    border-radius: 45px;
 }
-nav ul li a:after {
-    position: absolute;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background: rgb(74, 62, 46);
-    transition: 0.5s;
-    bottom: 0;
+#work {
+    background-color: linen;
+    font-size: 1.7rem;
+    line-height: 2;
+    padding: 25px;
+    margin: 3%;
+    border-radius: 45px;
 }
-nav ul li a:hover:after {
-    width: 100%;
+#contact {
+    background-color: peachpuff;
+    padding: 25px;
+    margin: 3%;
+    line-height: 2;
+    border-radius: 45px;
 }
-.btn {
-    color: cyan;
+.contact {
+    background: magenta;
+}
+.contact h2 {
+    color: navy;
+}
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.contact-info > * {
+    flex: 1;
+    margin: 15px;
+}
+.contact-info iframe {
+    height: 400px;
+}
+.contact-info div {
+    color: black;
+}
+.contact-info h3 {
+    color: whitesmoke;
+    font-size: 32px;
+}
+.contact-info p, .contact-info address {
+    margin: 20px 0;
+    line-height: 1.5;
     font-size: 16px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    padding: 16px 40px;
-    border-radius: 500px;
-    display: inline-block;
-    font-weight: 500;
-    transition: all 0.5s ease-in-out;
-    background-size: 152% 100%;
-    background: rgb(250, 79, 227);
-    border: 2px solid burlywood;
+    font-style: normal;
 }
-.btn:hover {
-    background: transparent;
-    border-color: violet;
-    color: red;
+.contact-form input, .contact-form textarea {
+    border: 1px solid forestgreen;
+    display: block;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: navy;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: mistyrose;
 }
-.Book {
-    position: absolute;
-    top: 35%;
-    left: 8%;
+.contact-form input:focus, .contact-form textarea:focus {
+    background-color: palegreen;
+    outline: none;
 }
-.Book .Bee {
-    color: rgb(74, 62, 46);
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    display: inline-block;
+.contact-form button {
+    width: 100%;
+    border: none;
+    background: mediumvioletred;
+    color: azure;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.contact-form button:hover {
+    color: chartreuse;
+    background: maroon;
+}
+.contact-info a {
+    color: indigo;
+}
+.humburger-menu {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        margin-top: 20px;
+    }
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    .humburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+    .nav-links {
+        display: none;
+    }
+    section,
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    section {
+        padding: 30px 0;
+    }
+    section h2 {
+        margin-bottom: 20px;
+    }
+}
+.work-gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.work-gallery a {
     margin-bottom: 20px;
 }
-.Book h1 {
+.work-gallery img {
+    width: 200px;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+.work-gallery img:hover {
+    transform: scale(1.1);
+}
+footer {
+    background: pink;
     color: maroon;
-    font-size: xx-large;
-    font-weight: 900;
-    line-height: 90px;
-    text-transform: inherit;
-    width: 70%;
+    padding: 20px 0;
+    border-radius: 45px;
 }
-.Book h1 span {
-    color: rgb(93, 93, 2);
-}
-.Book p {
-    width: 55%;
-    color: black;
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-
